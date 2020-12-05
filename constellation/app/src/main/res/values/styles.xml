@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- 隐藏标题头：NoActionBar, 显示标题头：DarkActionBar（默认）   -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--  将布局当中统一的属性信息进行定义  -->
+    <!--  定义首页面当中四个 RadioButton 的属性信息  -->
+    <!--      android:checked="false":  不选中状态
+                android:drawableTop="@drawable/main_rb_star":  灰色
+                android:drawablePadding:设置间距
+                android:gravity="center"  设置位置剧中
+                android:button="@null"  设置不显示圆形的单选标志-->
+    <style name="main_rb">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/main_rbtxt</item>
+    </style>
+
+    <!-- 全屏显示，无透明状态栏
+      parent="AppTheme": 继承父类，AppTheme是父类的name属性值。
+      name="android:windowFullscreen": 是否全屏显示（true:全屏显示，false：不全屏显示）
+      -->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 全屏显示，有透明的状态栏   -->
+    <style name="statusBar" parent="AppTheme"></style>
+
+</resources>
